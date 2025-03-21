@@ -54,6 +54,14 @@ body {
     /* Estilos para el logo (ahora vacío) */
 }
 
+.nav-logo {
+    height: 50px; /* Ajustar la altura al tamaño de la barra de navegación */
+    margin-right: 20px; /* Espacio entre la imagen y la navegación */
+    display: inline-block;
+    vertical-align: middle; /* Alinear verticalmente con la navegación */
+    object-fit: contain; /* Asegurar que la imagen se ajuste sin distorsionar */
+}
+
 .menu-toggle {
     background: none;
     border: none;
@@ -65,11 +73,10 @@ body {
 
 /* Estilos de la navegación principal */
 .main-nav {
-    background-image: url('01.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 1rem 0; /* Añadido padding para que se vea el fondo */
+    background-image: none; /* Eliminar el fondo anterior */
+    padding: 1rem 0; /* Mantener el padding */
+    display: inline-block; /* Mostrar en línea junto a la imagen */
+    vertical-align: middle; /* Alinear verticalmente con la imagen */
 }
 
 .main-nav ul {
@@ -78,7 +85,7 @@ body {
     margin: 0;
     display: flex;
     gap: 2.5rem; /* Aumentado el espacio entre los elementos */
-    justify-content: center; /* Centrar los elementos de la navegación */
+    /* justify-content: center; Eliminar el centrado para que la imagen esté a la izquierda */
 }
 
 .main-nav a {
@@ -405,6 +412,11 @@ body {
         align-items: flex-start;
     }
 
+    .nav-logo {
+        height: 40px; /* Ajustar tamaño en móvil si es necesario */
+        margin-right: 10px;
+    }
+
     .menu-toggle {
         display: block;
         margin-bottom: 1rem;
@@ -413,10 +425,7 @@ body {
     .main-nav {
         display: none;
         width: 100%;
-        background-image: url('01.jpg'); /* Asegurar el fondo en móvil también */
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+        background-image: none; /* Eliminar fondo en móvil también */
         padding: 1rem 0;
     }
 
