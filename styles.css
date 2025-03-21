@@ -55,7 +55,7 @@ body {
 }
 
 .nav-logo {
-    height: 50px; /* Ajustar la altura al tamaño de la barra de navegación */
+    height: 80px; /* Aumentamos la altura de la imagen */
     margin-right: 20px; /* Espacio entre la imagen y la navegación */
     display: inline-block;
     vertical-align: middle; /* Alinear verticalmente con la navegación */
@@ -413,7 +413,7 @@ body {
     }
 
     .nav-logo {
-        height: 40px; /* Ajustar tamaño en móvil si es necesario */
+        height: 60px; /* Ajustar tamaño en móvil si es necesario */
         margin-right: 10px;
     }
 
