@@ -1,6 +1,6 @@
 /* styles.css */
 :root {
-    --primary-color: #c72c41; /* Un rojo más elegante */
+    --primary-color: #0056b3; /* Un azul empresarial */
     --secondary-color: #f9f9f9; /* Un gris claro como fondo */
     --accent-color: #ffffff;
     --text-color: #333333;
@@ -224,7 +224,7 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #a72134; /* Un tono más oscuro al pasar el cursor */
+    background-color: #004494; /* Un tono más oscuro de azul al pasar el cursor */
 }
 
 /* Estilos de la sección de productos destacados */
@@ -361,7 +361,7 @@ body {
 }
 
 .footer-section button.btn-tertiary:hover {
-    background-color: #a72134;
+    background-color: #004494; /* Un tono más oscuro de azul */
 }
 
 .footer-bottom {
