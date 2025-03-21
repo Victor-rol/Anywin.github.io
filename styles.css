@@ -1,0 +1,452 @@
+/* styles.css */
+:root {
+    --primary-color: #c72c41; /* Un rojo más elegante */
+    --secondary-color: #f9f9f9; /* Un gris claro como fondo */
+    --accent-color: #ffffff;
+    --text-color: #333333;
+    --heading-color: #222222;
+    --primary-font: 'Open Sans', sans-serif; /* Fuente moderna y legible */
+    --secondary-font: 'Montserrat', sans-serif; /* Fuente para encabezados y acentos */
+}
+
+/* Importar fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--primary-font);
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0; /* Añadido un poco de padding vertical */
+}
+
+/* Estilos del encabezado */
+.site-header {
+    background: var(--primary-color);
+    color: var(--accent-color);
+    padding: 1.5rem 0; /* Aumentado el padding */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añadida una sombra sutil */
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header .logo img {
+    height: 50px; /* Aumentado el tamaño del logo */
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    font-size: 1.8rem; /* Aumentado el tamaño del ícono */
+    cursor: pointer;
+    display: none;
+}
+
+/* Estilos de la navegación principal */
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2.5rem; /* Aumentado el espacio entre los elementos */
+}
+
+.main-nav a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s ease; /* Añadida una transición suave */
+}
+
+.main-nav a:hover {
+    color: var(--secondary-color); /* Cambia de color al pasar el cursor */
+}
+
+.main-nav .dropdown {
+    position: relative;
+}
+
+.main-nav .dropdown > a {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.main-nav .dropdown:hover .mega-menu {
+    display: block;
+}
+
+.mega-menu {
+    display: none;
+    position: absolute;
+    background: var(--accent-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+    padding: 2rem; /* Aumentado el padding */
+    top: 100%;
+    left: 0;
+    min-width: 400px; /* Ancho mínimo aumentado */
+    z-index: 100;
+    display: flex;
+    gap: 2rem;
+    border-radius: 8px; /* Bordes redondeados */
+    margin-top: 0.5rem; /* Un pequeño espacio desde el enlace */
+}
+
+.menu-column {
+    margin-bottom: 0; /* Eliminado el margen inferior */
+}
+
+.menu-column h4 {
+    color: var(--heading-color);
+    font-family: var(--secondary-font);
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color); /* Línea de separación */
+    padding-bottom: 0.5rem;
+}
+
+.menu-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-column ul li a {
+    color: var(--text-color);
+    font-weight: normal;
+    display: block;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.menu-column ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Estilos de las acciones del encabezado */
+.header-actions {
+    display: flex;
+    gap: 1.5rem; /* Aumentado el espacio */
+}
+
+.header-actions a {
+    color: var(--accent-color);
+    font-size: 1.4rem; /* Aumentado el tamaño de los íconos */
+    transition: color 0.3s ease;
+}
+
+.header-actions a:hover {
+    color: var(--secondary-color);
+}
+
+/* Estilos del slider principal */
+.hero-slider {
+    margin: 3rem 0; /* Aumentado el margen */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Para que los bordes redondeados funcionen con las imágenes */
+}
+
+.slide-item {
+    height: 600px; /* Aumentada la altura */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.slide-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Superposición oscura sutil */
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--accent-color);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.slide-content h1 {
+    font-family: var(--secondary-font);
+    font-size: 3rem; /* Aumentado el tamaño del título */
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra en el texto */
+}
+
+.slide-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra en el texto */
+}
+
+.btn-primary {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--accent-color);
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra en el botón */
+}
+
+.btn-primary:hover {
+    background-color: #a72134; /* Un tono más oscuro al pasar el cursor */
+}
+
+/* Estilos de la sección de productos destacados */
+.featured-products {
+    padding: 4rem 0; /* Aumentado el padding */
+    text-align: center;
+}
+
+.featured-products h2 {
+    font-family: var(--secondary-font);
+    font-size: 2.5rem; /* Aumentado el tamaño del título */
+    color: var(--heading-color);
+    margin-bottom: 2.5rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Aumentado el ancho mínimo */
+    gap: 3rem; /* Aumentado el espacio */
+    margin-top: 3rem;
+}
+
+/* Estilos de la tarjeta de producto */
+.product-card {
+    background: var(--accent-color);
+    padding: 1.5rem;
+    border-radius: 10px; /* Bordes más redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra más notable */
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* Animación al pasar el cursor */
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Ligeramente elevado al pasar el cursor */
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px; /* Aumentada la altura de la imagen */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    color: var(--heading-color);
+    font-family: var(--secondary-font);
+    font-size: 1.4rem; /* Aumentado el tamaño del título del producto */
+    margin-top: 0;
+    margin-bottom: 0.7rem;
+}
+
+.product-card .price {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background: none;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+}
+
+/* Estilos del pie de página */
+.site-footer {
+    background: #222222; /* Un tono más oscuro */
+    color: var(--accent-color);
+    padding: 3rem 0; /* Aumentado el padding */
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajustado el ancho mínimo */
+    gap: 2.5rem; /* Aumentado el espacio */
+    margin-bottom: 2.5rem;
+}
+
+.footer-section h4 {
+    font-family: var(--secondary-font);
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.footer-section p,
+.footer-section a {
+    color: #dddddd;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.7rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--primary-color);
+}
+
+.footer-section form {
+    display: flex;
+}
+
+.footer-section input[type="email"] {
+    padding: 0.7rem;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    flex-grow: 1;
+    color: var(--text-color);
+}
+
+.footer-section button.btn-tertiary {
+    background: var(--primary-color);
+    color: var(--accent-color);
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.footer-section button.btn-tertiary:hover {
+    background-color: #a72134;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333333;
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom p {
+    color: #aaaaaa;
+    font-size: 0.9rem;
+}
+
+.social-icons a {
+    color: var(--accent-color);
+    margin-left: 1rem;
+    font-size: 1.4rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .site-header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .main-nav {
+        display: none;
+        width: 100%;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-nav ul li {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.8rem;
+    }
+
+    .main-nav ul li a {
+        display: block;
+        padding: 0.8rem;
+        border-bottom: 1px solid #444; /* Separador para el menú móvil */
+    }
+
+    .main-nav ul li:last-child a {
+        border-bottom: none;
+    }
+
+    .header-actions {
+        margin-top: 1rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .social-icons {
+        margin-top: 1rem;
+    }
+}
